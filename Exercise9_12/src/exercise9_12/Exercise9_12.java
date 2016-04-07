@@ -54,17 +54,31 @@ int width = 0;
     
 }
 
-class Geometry{
-    int perimater;
-    int area;
+class Rectangle{
     
-    Geometry(){
-        perimater = 0;
-        area = 0;
+    double xp;
+    double yp;
+    double width;
+    double height;
+    
+    Rectangle(){
+    
     }
     
-   static int getArea(){
+    Rectangle(double xc, double yc, double widthC, double heightC){
+        xp = xc;
+        yp = yc;
+        
+        width = widthC;
+        height = heightC;
+    }
+    
+    double getArea(){
      
-       return 0;
+       return width * height;
    }
+    
+    double getPerimeter(){
+        return width*2 + height*2;
+    }
 }
